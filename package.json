@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto de tickets para reporte y solución de problemas, desarrollado en Nodejs con Typescript en el framework Express, conectado a una base de datos MongoDB",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "dev": "ts-node-dev src/index.ts"
