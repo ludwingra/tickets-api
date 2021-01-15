@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "614bc6eb-fcb4-4021-87fd-9c7d84ce6c5b",
+		"name": "API Tickets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Obtener lista de tickets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tickets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear un ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Error inesperado\",\n  \"description\": \"La aplicación web esta bloqueada para el usuario\",\n  \"name\": \"Anonimo 2\",\n  \"email\": \"nonimo2@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/tickets",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tickets"
+							]
+						},
+						"description": "Enpoint para que los usuarios reporten un problema."
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener un ticket por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/tickets/6000bd12f522bd1724905613",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tickets",
+								"6000bd12f522bd1724905613"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Conectar agente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agent\": \"Carlos\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/tickets/solved",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tickets",
+								"solved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Se resuelve un Ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/tickets/solved/60010a0355f25a2877c680ce",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"tickets",
+								"solved",
+								"60010a0355f25a2877c680ce"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agents",
+			"item": [
+				{
+					"name": "Lista de agentes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/agent?connected=true",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"agent"
+							],
+							"query": [
+								{
+									"key": "connected",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Conectar agente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agent\": \"6001034fa4c8cb264031943e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/agent/connect",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"agent",
+								"connect"
+							]
+						},
+						"description": "Enpoint para que un agente se conecte al sistema"
+					},
+					"response": []
+				},
+				{
+					"name": "Desconectar un agente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/agent/disconnect/6001034fa4c8cb264031943c",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"agent",
+								"disconnect",
+								"6001034fa4c8cb264031943c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -5,13 +5,13 @@ import * as agentController from "../controllers/agent.controller";
 
 const router = Router();
 
-// Obtner ticket por id
+// Obtner agent por id
 router.get('/agent/:id', agentController.getAgent);
-// Obtner lista de tickets
+// Obtner lista de agent
 router.get('/agent', agentController.getAgents);
-// Crear un ticket
+// Crear un agent
 router.post('/agent', agentController.createAgent);
-// Eliminar un ticket por id
+// Eliminar un agent por id
 router.delete('/agent', agentController.deleteAgent);
 
 // Se desconecta un agente
