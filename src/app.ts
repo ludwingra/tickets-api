@@ -5,6 +5,7 @@ import config from "./config";
 
 // Importar routes
 import TicketRoutes from "./routes/ticket.routes";
+import AgentRoutes from "./routes/agent.routes";
 
 import Agent from "./models/Agent";
 
@@ -19,11 +20,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(TicketRoutes);
+app.use(AgentRoutes);
 
 // Valida los agentes
 (async () => {
+  // Busca los agentes
   const agent = await Agent.find();
   if (!agent.length) {
+    // Si no encuentra agentes, crea 5 de prueba
     let data: any = [
       { name: 'Luis' },
       { name: 'Carlos' },

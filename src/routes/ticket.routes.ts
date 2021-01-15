@@ -16,6 +16,9 @@ router.delete('/tickets', ticketController.deleteTicket);
 
 // Se conecta un agente
 router.post('/agent/connect', ticketController.agentConnect);
+// Resuelvo el ticket
+router.get('/tickets/solved/:id', ticketController.solvedTicket);
+
 
 // router.put('/tickets', ticketController.updateTicket);
 
