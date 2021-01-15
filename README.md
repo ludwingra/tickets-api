@@ -21,7 +21,9 @@ El soporte de nuestros usuarios es muy importante. Nuestros agentes quieren ser 
 ```
   npm run dev
 ```
-5. Probar una de las rutas, la ruta de obtener tickets es de tipo GET y se puede consultar en cualquier navegador.
+5. Tener ejecutando el servidor de mongoDB, en el caso de que se deban cabiar los parametros de conexión, se deben hacer en el archivo /src/config.ts
+
+6. Probar una de las rutas, la ruta de obtener tickets es de tipo GET y se puede consultar en cualquier navegador.
 http://localhost:4000/tickets
 
 
