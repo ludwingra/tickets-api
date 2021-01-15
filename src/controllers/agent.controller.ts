@@ -57,7 +57,7 @@ export const deleteAgent: RequestHandler = async (req, res, next) => {
 export const agentDisconnected: RequestHandler = async (req, res) => {
   try {
 
-    await Agent.findByIdAndUpdate(req.body.agent, { connected: false });
+    await Agent.findByIdAndUpdate(req.params.agent, { connected: false });
     res.json({
       message: 'Agente desconectado'
     });

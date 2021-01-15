@@ -15,7 +15,7 @@ router.post('/agent', agentController.createAgent);
 router.delete('/agent', agentController.deleteAgent);
 
 // Se desconecta un agente
-router.post('/agent/disconnect', agentController.agentDisconnected);
+router.get('/agent/disconnect/:agent', agentController.agentDisconnected);
 
 
 
